@@ -4,8 +4,12 @@ import AppTheme from "./theme/AppTheme";
 import {CssBaseline} from "@mui/material";
 import Navbar from "./components/navbar/Navbar";
 import Container from "@mui/material/Container";
-import MainContent from "./pages/home-page/MainContent";
+import Home from "./pages/home/Home";
 import Footer from "./components/footer/Footer";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import About from "./pages/about/About";
+import Products from "./pages/products/Products";
+import TheRoom from "./pages/the-room/TheRoom";
 
 function App(props: { disableCustomTheme?: boolean }) {
   return (
@@ -19,7 +23,16 @@ function App(props: { disableCustomTheme?: boolean }) {
               component="main"
               sx={{ display: 'flex', flexDirection: 'column', my: 16, gap: 4 }}>
 
-              <MainContent />
+
+              <BrowserRouter>
+                  <Routes>
+                      <Route path="/" element={<Home/>} />
+                      <Route path="/products" element={<Products/>} />
+                      <Route path="/the-room" element={<TheRoom/>} />
+                      <Route path="/about" element={<About/>} />
+                  </Routes>
+
+              </BrowserRouter>
               {/*<Latest />*/}
           </Container>
           <Footer />

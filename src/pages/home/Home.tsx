@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import {styled} from '@mui/material/styles';
 import RssFeedRoundedIcon from '@mui/icons-material/RssFeedRounded';
+import Link from "@mui/material/Link";
 
 const cardData = [
   {
@@ -29,7 +30,7 @@ const cardData = [
     tag: 'Spiritueux',
     title: 'Notre Sélection de Whiskies',
     description:
-      'Découvrez notre gamme exceptionnelle de whiskies, soigneusement sélectionnés pour ravir les palais les plus exigeants. Que vous soyez amateur de single malts écossais, curieux des blends japonais raffinés ou en quête de saveurs inédites, nous avons de quoi vous séduire.',
+      'Découvrez notre products exceptionnelle de whiskies, soigneusement sélectionnés pour ravir les palais les plus exigeants. Que vous soyez amateur de single malts écossais, curieux des blends japonais raffinés ou en quête de saveurs inédites, nous avons de quoi vous séduire.',
   },
   {
     img: '/salle/qg_4.jpg',
@@ -83,7 +84,7 @@ const StyledTypography = styled(Typography)({
   textOverflow: 'ellipsis',
 });
 
-export default function MainContent() {
+export default function Home() {
   const [focusedCardIndex, setFocusedCardIndex] = React.useState<number | null>(
     null,
   );
@@ -259,6 +260,10 @@ export default function MainContent() {
                   >
                     {cardData[3].description}
                   </StyledTypography>
+                  <Link href="#" color="inherit">
+                    En savoir plus
+
+                  </Link>
                 </div>
               </SyledCardContent>
               <CardMedia

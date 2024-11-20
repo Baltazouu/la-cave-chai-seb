@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import LaCaveIcon from '../icon/LaCaveIcon';
 import ColorModeIconDropdown from '../../theme/ColorModeIconDropdown';
+import Link from "@mui/material/Link";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -55,16 +56,16 @@ export default function Navbar() {
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <LaCaveIcon />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="text" color="info" size="small" >
+              <Button variant="text" color="info" size="small" href="/">
                 Accueil
               </Button>
-              <Button variant="text" color="info" size="small">
+              <Button variant="text" color="info" size="small" href="/products">
                 Notre Gamme
               </Button>
-              <Button variant="text" color="info" size="small">
+              <Button variant="text" color="info" size="small" href="/the-room">
                 La salle
               </Button>
-              <Button variant="text" color="info" size="small">
+              <Button variant="text" color="info" size="small" href="/about">
                 À Propos
               </Button>
             </Box>
@@ -110,12 +111,10 @@ export default function Navbar() {
                     <CloseRoundedIcon />
                   </IconButton>
                 </Box>
-                <MenuItem>Features</MenuItem>
-                <MenuItem>Testimonials</MenuItem>
-                <MenuItem>Highlights</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
-                <MenuItem>Blog</MenuItem>
+                <MenuItem><Link underline="none" href="/">Accueil</Link></MenuItem>
+                <MenuItem><Link underline="none" href="/products">Notre gamme</Link></MenuItem>
+                <MenuItem><Link underline="none" href="/the-room">La Salle</Link></MenuItem>
+                <MenuItem><Link underline="none" href="/about">À Propos</Link></MenuItem>
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
                   <Button color="primary" variant="contained" fullWidth>
