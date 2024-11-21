@@ -11,8 +11,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import LaCaveIcon from '../icon/LaCaveIcon';
-import ColorModeIconDropdown from '../../theme/ColorModeIconDropdown';
+import LaCaveIcon from './LaCaveIcon';
+import ColorModeIconDropdown from '../theme/ColorModeIconDropdown';
 import {Link} from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({

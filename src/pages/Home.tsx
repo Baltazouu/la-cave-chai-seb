@@ -4,49 +4,15 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid2';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import {styled} from '@mui/material/styles';
-import RssFeedRoundedIcon from '@mui/icons-material/RssFeedRounded';
 import Link from "@mui/material/Link";
+import {HomeCards} from "../data/HomeCards";
+import {CardData} from "../model/CardData";
+import Container from "@mui/material/Container";
+import Reviews from "../components/Reviews";
 
-const cardData = [
-  {
-    img: '/cave/le-qg-chai-seb-6.jpg',
-    tag: 'La cave',
-    title: 'Revolutionizing software development with cutting-edge tools',
-    description:
-      'Our latest engineering tools are designed to streamline workflows and boost productivity. Discover how these innovations are transforming the software development landscape.',
-  },
-  {
-    img: '/cave/photo_2.jpg',
-    tag: 'Product',
-    title: 'Innovative product features that drive success',
-    description:
-      'Explore the key features of our latest product release that are helping businesses achieve their goals. From user-friendly interfaces to robust functionality, learn why our product stands out.',
-  },
-  {
-    img: '/cave/wiskies.jpg',
-    tag: 'Spiritueux',
-    title: 'Notre Sélection de Whiskies',
-    description:
-      'Découvrez notre products exceptionnelle de whiskies, soigneusement sélectionnés pour ravir les palais les plus exigeants. Que vous soyez amateur de single malts écossais, curieux des blends japonais raffinés ou en quête de saveurs inédites, nous avons de quoi vous séduire.',
-  },
-  {
-    img: '/salle/qg_4.jpg',
-    tag: 'La Salle',
-    title: "L'endroit parfait pour vos récéptions",
-    description:
-        "La Salle Chai Seb, situé au premier étage de la cave, offre un espace de 80m² pour des événements privés et professionnels. Au rez-de-chaussée, découvrez \"La Cave Chai Séb\" avec une sélection de vins et bières. Des partenariats avec des traiteurs locaux permettent de proposer des repas sur place."
-  },
-  {
-    img: '/cave/calvas.jpeg',
-    tag: 'Spiritueux',
-    title: "Calvados d'exception, soigneusement sélectionnés",
-    description:
-      'Découvrez l\'excellence des calvados de Normandie avec le Père Magloire, symbole de tradition, et le Domaine du Château du Breuil, alliant finesse et savoir-faire. Ces eaux-de-vie d\'exception capturent l\'âme du terroir normand.',
-  },
-];
+const cardData : CardData[] = HomeCards();
 
 const SyledCard = styled(Card)(({ theme }) => ({
   display: 'flex',
@@ -99,6 +65,12 @@ export default function Home() {
 
 
   return (
+
+      <Container
+          maxWidth="lg"
+          component="main"
+          sx={{ display: 'flex', flexDirection: 'column', my: 2, gap: 4 }}
+      >
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
       <div>
         <Typography variant="h1" gutterBottom>
@@ -115,10 +87,6 @@ export default function Home() {
           overflow: 'auto',
         }}
       >
-        {/*<Search />*/}
-        <IconButton size="small" aria-label="RSS feed">
-          <RssFeedRoundedIcon />
-        </IconButton>
       </Box>
       <Box
         sx={{
@@ -311,5 +279,7 @@ export default function Home() {
         </Grid>
       </Grid>
     </Box>
+    <Reviews/>
+    </Container>
   );
 }

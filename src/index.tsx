@@ -5,14 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { StyledEngineProvider } from "@mui/material";
 import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from "./ScrollToTop";
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
 );
 root.render(
 	<React.StrictMode>
-		<BrowserRouter>
+		<BrowserRouter future={{
+			v7_startTransition: true,
+			v7_relativeSplatPath: true,
+		}}>
 			<StyledEngineProvider injectFirst>
+				<ScrollToTop />
 				<App />
 			</StyledEngineProvider>
 		</BrowserRouter>

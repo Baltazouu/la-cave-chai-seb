@@ -2,14 +2,14 @@ import React from 'react';
 import './App.css';
 import AppTheme from "./theme/AppTheme";
 import {CssBaseline} from "@mui/material";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/Navbar";
 import Container from "@mui/material/Container";
-import Home from "./pages/home/Home";
-import Footer from "./components/footer/Footer";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import About from "./pages/about/About";
-import Products from "./pages/products/Products";
-import TheRoom from "./pages/the-room/TheRoom";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import TheRoom from "./pages/TheRoom";
 
 function App(props: { disableCustomTheme?: boolean }) {
   return (
