@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { alpha, styled } from '@mui/material/styles';
+import {alpha, styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,8 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import LaCaveIcon from '../icon/LaCaveIcon';
 import ColorModeIconDropdown from '../../theme/ColorModeIconDropdown';
-//import Link from "@mui/material/Link";
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	display: 'flex',
@@ -121,10 +120,19 @@ export default function Navbar() {
 										<CloseRoundedIcon />
 									</IconButton>
 								</Box>
-								<MenuItem><Link to={"/"}>Accueil</Link></MenuItem>
-								<MenuItem><Link to={"/products"} >Notre gamme</Link></MenuItem>
-								<MenuItem><Link to="/the-room">La Salle</Link></MenuItem>
-								<MenuItem><Link to="/about">À Propos</Link></MenuItem>
+								<MenuItem component={Link} to="/" sx={{ color: 'info', textDecoration: 'none' }}>
+									Accueil
+								</MenuItem>
+								<MenuItem component={Link} to="/products" sx={{ color: 'info', textDecoration: 'none' }}>
+									Notre gamme
+								</MenuItem>
+								<MenuItem component={Link} to="/the-room" sx={{ color: 'info', textDecoration: 'none' }}>
+									La Salle
+								</MenuItem>
+								<MenuItem component={Link} to="/about" sx={{ color: 'info', textDecoration: 'none' }}>
+									À Propos
+								</MenuItem>
+
 								<Divider sx={{ my: 3 }} />
 								<MenuItem>
 									<Button color="primary" variant="contained" fullWidth>
