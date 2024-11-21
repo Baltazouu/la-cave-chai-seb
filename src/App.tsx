@@ -24,7 +24,7 @@ function App(props: { disableCustomTheme?: boolean }) {
               sx={{ display: 'flex', flexDirection: 'column', my: 16, gap: 4 }}>
 
 
-              <BrowserRouter>
+              
                   <Routes>
                       <Route path="/" element={<Home/>} />
                       <Route path="/products" element={<Products/>} />
@@ -32,7 +32,7 @@ function App(props: { disableCustomTheme?: boolean }) {
                       <Route path="/about" element={<About/>} />
                   </Routes>
 
-              </BrowserRouter>
+              
               {/*<Latest />*/}
           </Container>
           <Footer />
