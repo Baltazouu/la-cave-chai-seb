@@ -1,5 +1,5 @@
 
-export interface CardData{
+export interface HomeCardData {
     img:string,
     tag:string,
     title:string,

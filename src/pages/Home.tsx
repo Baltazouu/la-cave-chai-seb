@@ -1,54 +1,18 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
-import {styled} from '@mui/material/styles';
 import Link from "@mui/material/Link";
 import {HomeCards} from "../data/HomeCards";
-import {CardData} from "../model/CardData";
+import {HomeCardData} from "../model/HomeCardData";
 import Container from "@mui/material/Container";
 import Reviews from "../components/Reviews";
+import {StyledCard} from "../components/StyledCard/StyledCard";
+import {StyledTypography} from "../components/StyledCard/StyledTypoGraphy";
+import {StyledCardContent} from "../components/StyledCard/StyledCardContent";
 
-const cardData : CardData[] = HomeCards();
-
-const SyledCard = styled(Card)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  padding: 0,
-  height: '100%',
-  backgroundColor: theme.palette.background.paper,
-  '&:hover': {
-    backgroundColor: 'transparent',
-    cursor: 'pointer',
-  },
-  '&:focus-visible': {
-    outline: '3px solid',
-    outlineColor: 'hsla(210, 98%, 48%, 0.5)',
-    outlineOffset: '2px',
-  },
-}));
-
-const SyledCardContent = styled(CardContent)({
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 4,
-  padding: 16,
-  flexGrow: 1,
-  '&:last-child': {
-    paddingBottom: 16,
-  },
-});
-
-const StyledTypography = styled(Typography)({
-  display: '-webkit-box',
-  WebkitBoxOrient: 'vertical',
-  //WebkitLineClamp: au,
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-});
+const cardData : HomeCardData[] = HomeCards();
 
 export default function Home() {
   const [focusedCardIndex, setFocusedCardIndex] = React.useState<number | null>(
@@ -102,7 +66,7 @@ export default function Home() {
       </Box>
       <Grid container spacing={2} columns={12}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <SyledCard
+          <StyledCard
             variant="outlined"
             onFocus={() => handleFocus(0)}
             onBlur={handleBlur}
@@ -119,7 +83,7 @@ export default function Home() {
                 borderColor: 'divider',
               }}
             />
-            <SyledCardContent>
+            <StyledCardContent>
               <Typography gutterBottom variant="caption" component="div">
                 {cardData[0].tag}
               </Typography>
@@ -129,11 +93,11 @@ export default function Home() {
               <StyledTypography variant="body2" color="text.secondary" gutterBottom>
                 {cardData[0].description}
               </StyledTypography>
-            </SyledCardContent>
-          </SyledCard>
+            </StyledCardContent>
+          </StyledCard>
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          <SyledCard
+          <StyledCard
             variant="outlined"
             onFocus={() => handleFocus(1)}
             onBlur={handleBlur}
@@ -150,7 +114,7 @@ export default function Home() {
                 borderColor: 'divider',
               }}
             />
-            <SyledCardContent>
+            <StyledCardContent>
               <Typography gutterBottom variant="caption" component="div">
                 {cardData[1].tag}
               </Typography>
@@ -160,11 +124,11 @@ export default function Home() {
               <StyledTypography variant="body2" color="text.secondary" gutterBottom>
                 {cardData[1].description}
               </StyledTypography>
-            </SyledCardContent>
-          </SyledCard>
+            </StyledCardContent>
+          </StyledCard>
         </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
-          <SyledCard
+          <StyledCard
             variant="outlined"
             onFocus={() => handleFocus(2)}
             onBlur={handleBlur}
@@ -181,7 +145,7 @@ export default function Home() {
                 aspectRatio: { sm: '16 / 9', md: '' },
               }}
             />
-            <SyledCardContent>
+            <StyledCardContent>
               <Typography gutterBottom variant="caption" component="div">
                 {cardData[2].tag}
               </Typography>
@@ -191,14 +155,14 @@ export default function Home() {
               <StyledTypography variant="body2" color="text.secondary" gutterBottom>
                 {cardData[2].description}
               </StyledTypography>
-            </SyledCardContent>
-          </SyledCard>
+            </StyledCardContent>
+          </StyledCard>
         </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
           <Box
             sx={{ display: 'flex', flexDirection: 'column', gap: 2, height: '100%' }}
           >
-            <SyledCard
+            <StyledCard
               variant="outlined"
               onFocus={() => handleFocus(3)}
               onBlur={handleBlur}
@@ -206,7 +170,7 @@ export default function Home() {
               className={focusedCardIndex === 3 ? 'Mui-focused' : ''}
               sx={{ height: '100%' }}
             >
-              <SyledCardContent
+              <StyledCardContent
                 sx={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -233,7 +197,7 @@ export default function Home() {
 
                   </Link>
                 </div>
-              </SyledCardContent>
+              </StyledCardContent>
               <CardMedia
                   component="img"
                   alt="green iguana"
@@ -243,11 +207,11 @@ export default function Home() {
                     aspectRatio: { sm: '16 / 9', md: '' },
                   }}
               />
-            </SyledCard>
+            </StyledCard>
           </Box>
         </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
-          <SyledCard
+          <StyledCard
             variant="outlined"
             onFocus={() => handleFocus(5)}
             onBlur={handleBlur}
@@ -264,7 +228,7 @@ export default function Home() {
                 aspectRatio: { sm: '16 / 9', md: '' },
               }}
             />
-            <SyledCardContent>
+            <StyledCardContent>
               <Typography gutterBottom variant="caption" component="div">
                 {cardData[4].tag}
               </Typography>
@@ -274,8 +238,8 @@ export default function Home() {
               <StyledTypography variant="body2" color="text.secondary" gutterBottom>
                 {cardData[4].description}
               </StyledTypography>
-            </SyledCardContent>
-          </SyledCard>
+            </StyledCardContent>
+          </StyledCard>
         </Grid>
       </Grid>
     </Box>

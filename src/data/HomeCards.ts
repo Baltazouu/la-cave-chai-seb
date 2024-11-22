@@ -1,7 +1,7 @@
-import {CardData} from "../model/CardData";
+import {HomeCardData} from "../model/HomeCardData";
 
 
-export function HomeCards() : CardData[]{
+export function HomeCards() : HomeCardData[]{
     return [
         {
             img: '/cave/le-qg-chai-seb-6.jpg',
