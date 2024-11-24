@@ -194,7 +194,6 @@ export default function Home() {
                   </StyledTypography>
                   <Link href="#" color="inherit">
                     En savoir plus
-
                   </Link>
                 </div>
               </StyledCardContent>

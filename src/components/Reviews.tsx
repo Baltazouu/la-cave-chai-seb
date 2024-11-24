@@ -53,17 +53,6 @@ function AuthorInfos({ author }: { author: Author }) {
 }
 
 export default function Reviews() {
-    const [focusedCardIndex, setFocusedCardIndex] = React.useState<number | null>(
-        null,
-    );
-
-    const handleFocus = (index: number) => {
-        setFocusedCardIndex(index);
-    };
-
-    const handleBlur = () => {
-        setFocusedCardIndex(null);
-    };
 
     return (
         <Box>
