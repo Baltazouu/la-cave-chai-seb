@@ -1,14 +1,14 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import { Chip } from "@mui/material";
-import { Product } from "../model/Product";
+import {Chip} from "@mui/material";
+import {Product} from "../model/Product";
 import ProductGrid from "../components/products/ProductGrid";
 import Container from "@mui/material/Container";
-import { wines } from "../data/product/Wines";
-import { beers } from "../data/product/Beers";
-import { whiskies } from "../data/product/Whiskies";
-import { spirits } from "../data/product/Spirits";
+import {wines} from "../data/product/Wines";
+import {beers} from "../data/product/Beers";
+import {whiskies} from "../data/product/Whiskies";
+import {spirits} from "../data/product/Spirits";
 
 export default function Products() {
     const [products, setProducts] = React.useState<Product[]>([...spirits, ...beers,...wines, ...whiskies]);
@@ -36,16 +36,19 @@ export default function Products() {
     };
 
     const getChipStyles = (category: string) => {
-        return selectedCategory === category ? { backgroundColor: 'primary.main', color: 'white' } : { backgroundColor: 'transparent', border: 'none' };
+        return selectedCategory === category ? { backgroundColor: 'primary', color: 'white' } : { backgroundColor: 'transparent', border: 'none' };
     };
 
     return (
         <Container
             maxWidth="lg"
             component="main"
-            sx={{ display: 'flex', flexDirection: 'column', my: 2, gap: 4 }}
+            sx={{ display: 'flex',
+                flexDirection: 'column',
+                my: 2, gap: 4
+            }}
         >
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent:'center', gap: 4 }}>
                 <Box>
                     <Typography variant="h1" gutterBottom>
                         Nos Produits
@@ -92,7 +95,13 @@ export default function Products() {
                     />
                 </Box>
                 <ProductGrid products={products} />
+
+                <Typography color="text.secondary" variant={'body1'}>
+                    Découvrez plus de produits directement à la cave
+                </Typography>
+
             </Box>
+
         </Container>
     );
 }
