@@ -1,41 +1,45 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import {Chip} from "@mui/material";
-import {wines} from "../data/product/Wines";
-import {Product} from "../model/Product";
+import { Chip } from "@mui/material";
+import { Product } from "../model/Product";
 import ProductGrid from "../components/products/ProductGrid";
 import Container from "@mui/material/Container";
-import {beers} from "../data/product/Beers";
-import {whiskies} from "../data/product/Whiskies";
-import {spirits} from "../data/product/Spirits";
+import { wines } from "../data/product/Wines";
+import { beers } from "../data/product/Beers";
+import { whiskies } from "../data/product/Whiskies";
+import { spirits } from "../data/product/Spirits";
 
 export default function Products() {
-
-    const [products, setProducts] = React.useState<Product[]>(wines);
-
+    const [products, setProducts] = React.useState<Product[]>([...spirits, ...beers,...wines, ...whiskies]);
+    const [selectedCategory, setSelectedCategory] = React.useState<string>("All");
 
     const handleClick = (category: string) => {
+        setSelectedCategory(category);
         switch (category) {
-            case "Vins":
+            case "Wines":
                 setProducts(wines);
                 break;
-            case "Bières":
+            case "Beers":
                 setProducts(beers);
                 break;
             case "Whiskies":
                 setProducts(whiskies);
                 break;
-            case "Spiritueux":
+            case "Spirits":
                 setProducts(spirits);
                 break;
             default:
-                setProducts(wines);
+                const allProducts = [...wines, ...beers, ...whiskies, ...spirits];
+                setProducts(allProducts);
         }
     };
 
-    return (
+    const getChipStyles = (category: string) => {
+        return selectedCategory === category ? { backgroundColor: 'primary.main', color: 'white' } : { backgroundColor: 'transparent', border: 'none' };
+    };
 
+    return (
         <Container
             maxWidth="lg"
             component="main"
@@ -56,14 +60,38 @@ export default function Products() {
                         overflow: 'auto',
                     }}
                 >
-                    <Chip onClick={() => handleClick("Tout voir")} size="medium" label="Tout voir" />
-                    <Chip onClick={() => handleClick("Vins")} size="medium" label="Vins" sx={{ backgroundColor: 'transparent', border: 'none' }} />
-                    <Chip onClick={() => handleClick("Bières")} size="medium" label="Bières" sx={{ backgroundColor: 'transparent', border: 'none' }} />
-                    <Chip onClick={() => handleClick("Whiskies")} size="medium" label="Whiskies" sx={{ backgroundColor: 'transparent', border: 'none' }} />
-                    <Chip onClick={() => handleClick("Spiritueux")} size="medium" label="Spiritueux" sx={{ backgroundColor: 'transparent', border: 'none' }} />
-
+                    <Chip
+                        onClick={() => handleClick("All")}
+                        size="medium"
+                        label="Tout voir"
+                        sx={getChipStyles("All")}
+                    />
+                    <Chip
+                        onClick={() => handleClick("Wines")}
+                        size="medium"
+                        label="Vins"
+                        sx={getChipStyles("Wines")}
+                    />
+                    <Chip
+                        onClick={() => handleClick("Beers")}
+                        size="medium"
+                        label="Bières"
+                        sx={getChipStyles("Beers")}
+                    />
+                    <Chip
+                        onClick={() => handleClick("Whiskies")}
+                        size="medium"
+                        label="Whiskies"
+                        sx={getChipStyles("Whiskies")}
+                    />
+                    <Chip
+                        onClick={() => handleClick("Spirits")}
+                        size="medium"
+                        label="Spiritueux"
+                        sx={getChipStyles("Spirits")}
+                    />
                 </Box>
-                <ProductGrid products={products}/>
+                <ProductGrid products={products} />
             </Box>
         </Container>
     );

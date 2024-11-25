@@ -2,11 +2,11 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
 import * as React from "react";
 import {Product} from "../../model/Product";
-import {StyledCard} from "../StyledCard/StyledCard";
+import {StyledCard} from "../styled-card/StyledCard";
 import CardMedia from "@mui/material/CardMedia";
-import {StyledCardContent} from "../StyledCard/StyledCardContent";
+import {StyledCardContent} from "../styled-card/StyledCardContent";
 import Typography from "@mui/material/Typography";
-import {StyledTypography} from "../StyledCard/StyledTypoGraphy";
+import {StyledTypography} from "../styled-card/StyledTypoGraphy";
 
 export default function ProductGrid({products}:{products : Product[]}) {
     return (
@@ -36,6 +36,9 @@ export default function ProductGrid({products}:{products : Product[]}) {
                                     <StyledTypography variant="body2" color="text.secondary" gutterBottom>
                                         {product.description}
                                     </StyledTypography>
+                                    <Typography gutterBottom variant="caption" component="div">
+                                        {product.price} €
+                                    </Typography>
                                 </StyledCardContent>
                             </StyledCard>
                     </Grid>
