@@ -22,7 +22,14 @@ const ShowMore: React.FC<ShowMoreProps> = ({ text, maxLength = 100 }) => {
             {displayedText}
             {text.length > maxLength && (
                 <Box sx={{ display: 'block', mt: 1 }}>
-                    <Button sx={{backgroundColor:'none'}} size={'small'} onClick={toggleExpanded}  endIcon={isExpanded ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}>
+                    <Button
+                        sx={{backgroundColor:'none',
+                            '&:hover': { background: 'none'}
+                            }}
+                            size={'small'}
+                            onClick={toggleExpanded}
+                            endIcon={isExpanded ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+                    >
                         {isExpanded ? 'Réduire' : 'Afficher la suite'}
                     </Button>
                 </Box>
