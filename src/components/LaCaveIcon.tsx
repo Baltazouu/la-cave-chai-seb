@@ -3,7 +3,7 @@ import SvgIcon from '@mui/material/SvgIcon';
 
 export default function LaCaveIcon() {
   return (
-<SvgIcon sx={{ height: 40, width: 100, mr: 2, bgcolor:'white',borderRadius:1 }}>
+<SvgIcon sx={{ height: 40, width: 100, mr: 2, backgroundColor:'hsl(0, 0%, 99%)',borderRadius:1 }}>
       <svg
         width={86}
         height={19}

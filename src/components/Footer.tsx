@@ -9,21 +9,25 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import FacebookIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/X';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import LaCaveIcon from './LaCaveIcon';
 
 function Copyright() {
   return (
-    <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
-      {'Copyright © '}
-      <Link color="text.secondary" href="https://www.linkedin.com/in/baptiste-dudonné-68852926b/" target={"_blank"}>
-        Baptiste Dudonné
-      </Link>
-      &nbsp;
-      {new Date().getFullYear()}
-    </Typography>
+      <Box>
+        <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
+          {'La cave Chai Seb et ses amis Copyright ©'}
+          &nbsp;
+          {new Date().getFullYear()}
+        </Typography>
+          <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
+              {'Site réalisé par '}
+          <Link color="text.secondary" href="https://www.linkedin.com/in/baptiste-dudonné-68852926b/" target={"_blank"}>
+               Baptiste Dudonné
+          </Link>
+          </Typography>
+      </Box>
   );
 }
 
@@ -55,6 +59,7 @@ export default function Footer() {
               flexDirection: 'column',
               gap: 4,
               minWidth: { xs: '100%', sm: '60%' },
+              alignItems: 'center',
             }}
           >
             <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
@@ -99,71 +104,30 @@ export default function Footer() {
             </Box>
           </Box>
           <Box
-            sx={{
-              display: { xs: 'none', sm: 'flex' },
-              flexDirection: 'column',
-              gap: 1,
-            }}
-          >
-            <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-              Product
-            </Typography>
-            <Link color="text.secondary" variant="body2" href="#">
-              Features
+              display={'flex'}
+              flexDirection={'column'}
+              alignItems='flex-start'
+              mt={{xs:1,sm:0}}
+              justifyContent={'center'}
+              gap={1}>
+              <Typography
+                  variant="body2"
+                  gutterBottom
+                  sx={{ fontWeight: 600, mt: 2 }}
+              >
+                  Rejoignez notre newsletter
+              </Typography>
+            <Link color="text.secondary" variant="body2" href="tel:0231234567">
+                02 31 23 45 67
             </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Testimonials
+            <Link color="text.secondary" variant="body2" href="mailto:chaisebetsesamis@gmail.com">
+                chaisebetsesamis@gmail.com
             </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Highlights
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Pricing
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              FAQs
+            <Link color="text.secondary" variant="body2" href={'https://maps.app.goo.gl/Z5ygnz97R5aqhntH6'} target={'_blank'}>
+                61 rue du Général Leclerc, Lisieux, France
             </Link>
           </Box>
-          <Box
-            sx={{
-              display: { xs: 'none', sm: 'flex' },
-              flexDirection: 'column',
-              gap: 1,
-            }}
-          >
-            <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-              Company
-            </Typography>
-            <Link color="text.secondary" variant="body2" href="#">
-              About us
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Careers
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Press
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              display: { xs: 'none', sm: 'flex' },
-              flexDirection: 'column',
-              gap: 1,
-            }}
-          >
-            <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-              Legal
-            </Typography>
-            <Link color="text.secondary" variant="body2" href="#">
-              Terms
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Privacy
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Contact
-            </Link>
-          </Box>
+
         </Box>
         <Box
           sx={{
@@ -175,18 +139,10 @@ export default function Footer() {
             borderColor: 'divider',
           }}
         >
-          <div>
-            <Link color="text.secondary" variant="body2" href="#">
-              Privacy Policy
-            </Link>
-            <Typography sx={{ display: 'inline', mx: 0.5, opacity: 0.5 }}>
-              &nbsp;•&nbsp;
-            </Typography>
-            <Link color="text.secondary" variant="body2" href="#">
-              Terms of Service
-            </Link>
+          <Box>
+
             <Copyright />
-          </div>
+          </Box>
           <Stack
             direction="row"
             spacing={1}
@@ -196,8 +152,9 @@ export default function Footer() {
             <IconButton
               color="inherit"
               size="small"
-              href="https://github.com/mui"
-              aria-label="GitHub"
+              href="https://www.facebook.com/profile.php?id=61553453008072"
+              aria-label="Facebook"
+              target={'_blank'}
               sx={{ alignSelf: 'center' }}
             >
               <FacebookIcon />
@@ -205,20 +162,11 @@ export default function Footer() {
             <IconButton
               color="inherit"
               size="small"
-              href="https://x.com/MaterialUI"
+              href="https://www.instagram.com/lacavechaisebetsesamis/"
               aria-label="X"
               sx={{ alignSelf: 'center' }}
             >
-              <TwitterIcon />
-            </IconButton>
-            <IconButton
-              color="inherit"
-              size="small"
-              href="https://www.linkedin.com/company/mui/"
-              aria-label="LinkedIn"
-              sx={{ alignSelf: 'center' }}
-            >
-              <LinkedInIcon />
+              <InstagramIcon />
             </IconButton>
           </Stack>
         </Box>
