@@ -1,8 +1,8 @@
 import * as React from "react";
-import {StyledCard} from "../styled-card/StyledCard";
+import {StyledCard} from "./styled-card/StyledCard";
 
 
-export default function TheRoomImage(
+export default function CustomImage(
     {img,alt} : {img : string,alt:string}) {
     return(
         <StyledCard>
