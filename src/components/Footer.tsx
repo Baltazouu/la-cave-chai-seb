@@ -59,7 +59,6 @@ export default function Footer() {
               flexDirection: 'column',
               gap: 4,
               minWidth: { xs: '100%', sm: '60%' },
-              alignItems: 'center',
             }}
           >
             <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
@@ -82,8 +81,8 @@ export default function Footer() {
                   size="small"
                   variant="outlined"
                   fullWidth
-                  aria-label="Entrez votre addresse email"
-                  placeholder="Votre addresse email"
+                  aria-label="Entrez votre adresse email"
+                  placeholder="Votre adresse email"
                   slotProps={{
                     htmlInput: {
                       autoComplete: 'off',
@@ -115,7 +114,7 @@ export default function Footer() {
                   gutterBottom
                   sx={{ fontWeight: 600, mt: 2 }}
               >
-                  Rejoignez notre newsletter
+                  Contact
               </Typography>
             <Link color="text.secondary" variant="body2" href="tel:0231234567">
                 02 31 23 45 67

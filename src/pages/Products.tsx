@@ -84,7 +84,7 @@ export default function Products() {
                     <Chip
                         onClick={() => handleClick("Whiskies")}
                         size="medium"
-                        label="Whiskies"
+                        label="Whisky"
                         sx={getChipStyles("Whiskies")}
                     />
                     <Chip

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
-import TheRoomImage from "./TheRoomImage";
+import CustomImage from "../CustomImage";
 
 
 export default function TheRoomGrid() {
@@ -17,16 +17,16 @@ export default function TheRoomGrid() {
                 columns={{ xs: 4, sm: 8, md: 12 }}
                 >
                     <Grid size={{ xs: 4, md: 8 }}>
-                            <TheRoomImage img={'/salle/qg_1.jpg'} alt={'le qg'}/>
+                            <CustomImage img={'/salle/qg_1.jpg'} alt={'le qg'}/>
                     </Grid>
                     <Grid size={{xs: 4, md: 4}}>
-                        <TheRoomImage img={'/salle/qg_2.jpg'} alt={'le qg'}/>
+                        <CustomImage img={'/salle/qg_2.jpg'} alt={'le qg'}/>
                     </Grid>
                     <Grid size={{xs: 4, md: 4}}>
-                        <TheRoomImage img={'/salle/qg_3.jpg'} alt={'le qg'}/>
+                        <CustomImage img={'/salle/qg_3.jpg'} alt={'le qg'}/>
                     </Grid>
                     <Grid size={{xs: 4, md: 8}}>
-                        <TheRoomImage img={'/salle/qg_4.jpg'} alt={'le qg'}/>
+                        <CustomImage img={'/salle/qg_4.jpg'} alt={'le qg'}/>
                     </Grid>
                 </Grid>
             </Grid>
