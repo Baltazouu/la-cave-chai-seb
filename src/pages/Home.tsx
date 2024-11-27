@@ -1,9 +1,8 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 import Link from '@mui/material/Link';
 
 import {HomeCards} from "../data/HomeCards";
@@ -12,6 +11,7 @@ import Container from "@mui/material/Container";
 import {StyledCard} from "../components/styled-card/StyledCard";
 import {StyledTypography} from "../components/styled-card/StyledTypoGraphy";
 import {StyledCardContent} from "../components/styled-card/StyledCardContent";
+import CustomCardMedia from "../components/CustomCardMedia";
 
 const cardData : HomeCardData[] = HomeCards();
 
@@ -37,12 +37,12 @@ export default function Home() {
           sx={{display: 'flex', flexDirection: 'column', my: 2, gap: 4}}
       >
           <Box sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
-              <div>
+              <Box>
                   <Typography variant="h1" gutterBottom>
                       La Cave
                   </Typography>
                   <Typography>Votre spécialiste des vins, bières et spiritueux à lisieux (14100)</Typography>
-              </div>
+              </Box>
               <Box
                   sx={{
                       display: {xs: 'flex', sm: 'none'},
@@ -74,16 +74,7 @@ export default function Home() {
                           tabIndex={0}
                           className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
                       >
-                          <CardMedia
-                              component="img"
-                              alt="green iguana"
-                              image={cardData[0].img}
-                              sx={{
-                                  aspectRatio: '16 / 9',
-                                  borderBottom: '1px solid',
-                                  borderColor: 'divider',
-                              }}
-                          />
+                            <CustomCardMedia img={cardData[0].img} alt={cardData[0].title}/>
                           <StyledCardContent>
                               <Typography gutterBottom variant="caption" component="div">
                                   {cardData[0].tag}
@@ -105,16 +96,8 @@ export default function Home() {
                           tabIndex={0}
                           className={focusedCardIndex === 1 ? 'Mui-focused' : ''}
                       >
-                          <CardMedia
-                              component="img"
-                              alt="green iguana"
-                              image={cardData[1].img}
-                              aspect-ratio="16 / 9"
-                              sx={{
-                                  borderBottom: '1px solid',
-                                  borderColor: 'divider',
-                              }}
-                          />
+                          <CustomCardMedia img={cardData[1].img} alt={cardData[1].tag}/>
+
                           <StyledCardContent>
                               <Typography gutterBottom variant="caption" component="div">
                                   {cardData[1].tag}
@@ -137,15 +120,7 @@ export default function Home() {
                           className={focusedCardIndex === 2 ? 'Mui-focused' : ''}
                           sx={{height: '100%'}}
                       >
-                          <CardMedia
-                              component="img"
-                              alt="green iguana"
-                              image={cardData[2].img}
-                              sx={{
-                                  height: {sm: 'auto', md: '50%'},
-                                  aspectRatio: {sm: '16 / 9', md: ''},
-                              }}
-                          />
+                          <CustomCardMedia img={cardData[2].img} alt={cardData[2].tag}/>
                           <StyledCardContent>
                               <Typography gutterBottom variant="caption" component="div">
                                   {cardData[2].tag}
@@ -160,9 +135,6 @@ export default function Home() {
                       </StyledCard>
                   </Grid>
                   <Grid size={{xs: 12, md: 4}}>
-                      <Box
-                          sx={{display: 'flex', flexDirection: 'column', gap: 2, height: '100%'}}
-                      >
                           <StyledCard
                               variant="outlined"
                               onFocus={() => handleFocus(3)}
@@ -177,9 +149,8 @@ export default function Home() {
                                       flexDirection: 'column',
                                       justifyContent: 'space-between',
                                       height: '100%',
-                                  }}
-                              >
-                                  <div>
+                                  }}>
+                                  <Box>
                                       <Typography gutterBottom variant="caption" component="div">
                                           {cardData[3].tag}
                                       </Typography>
@@ -196,21 +167,11 @@ export default function Home() {
 
                                       <Link component={RouterLink} color="inherit" to={'/the-room'}>
                                           En savoir plus
-
                                       </Link>
-                                  </div>
+                                  </Box>
                               </StyledCardContent>
-                              <CardMedia
-                                  component="img"
-                                  alt="green iguana"
-                                  image={cardData[3].img}
-                                  sx={{
-                                      height: {sm: 'auto', md: '50%'},
-                                      aspectRatio: {sm: '16 / 9', md: ''},
-                                  }}
-                              />
+                              <CustomCardMedia img={cardData[3].img} alt={cardData[3].tag}/>
                           </StyledCard>
-                      </Box>
                   </Grid>
                   <Grid size={{xs: 12, md: 4}}>
                       <StyledCard
@@ -221,15 +182,7 @@ export default function Home() {
                           className={focusedCardIndex === 5 ? 'Mui-focused' : ''}
                           sx={{height: '100%'}}
                       >
-                          <CardMedia
-                              component="img"
-                              alt="green iguana"
-                              image={cardData[4].img}
-                              sx={{
-                                  height: {sm: 'auto', md: '50%'},
-                                  aspectRatio: {sm: '16 / 9', md: ''},
-                              }}
-                          />
+                          <CustomCardMedia img={cardData[4].img} alt={cardData[4].tag}/>
                           <StyledCardContent>
                               <Typography gutterBottom variant="caption" component="div">
                                   {cardData[4].tag}

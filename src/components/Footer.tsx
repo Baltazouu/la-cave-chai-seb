@@ -81,8 +81,8 @@ export default function Footer() {
                   size="small"
                   variant="outlined"
                   fullWidth
-                  aria-label="Entrez votre addresse email"
-                  placeholder="Votre addresse email"
+                  aria-label="Entrez votre adresse email"
+                  placeholder="Votre adresse email"
                   slotProps={{
                     htmlInput: {
                       autoComplete: 'off',

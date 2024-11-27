@@ -58,15 +58,15 @@ export default function TheRoom(){
             <Divider>Découvrez la salle</Divider>
 
                 <Stack direction="row" spacing={2} gap={2}  justifyContent={'center'} flexWrap={'wrap'} >
-                    <Chip size='medium' icon={<Groups2Icon />} label="60 Personnes" variant="outlined" />
+                    <Chip sx={{pl:1}} size='medium' icon={<Groups2Icon />} label="60 Personnes" variant="outlined" />
 
-                    <Chip size='medium' icon={<ZoomOutMapIcon />} label="80 M²" variant="outlined" />
+                    <Chip sx={{pl:1}} size='medium' icon={ <ZoomOutMapIcon />} label="80 M²" variant="outlined" />
 
-                    <Chip size={'medium'} icon={<KitchenIcon />} label="Cuisine équipée" variant="outlined" />
+                    <Chip sx={{pl:1}} size={'medium'} icon={ <KitchenIcon />} label="Cuisine équipée" variant="outlined" />
 
-                    <Chip size={'medium'} icon={<WifiIcon />} label="Wifi" variant="outlined" />
+                    <Chip sx={{pl:1}} size={'medium'} icon={ <WifiIcon />} label="Wifi" variant="outlined" />
 
-                    <Chip size={'medium'} icon={<VideoCameraBackIcon />} label="Vidéo projecteur" variant="outlined" />
+                    <Chip sx={{pl:1}} size={'medium'} icon={ <VideoCameraBackIcon />} label="Vidéo projecteur" variant="outlined" />
                 </Stack>
 
             <ShowMore text={description} maxLength={400}/>

@@ -10,8 +10,8 @@ export default function CustomImage(
             src={img}
             alt={alt}
             style={{
-                width: '100%',
                 height: '250px',
+                width: '100%',
                 objectFit: 'cover',
                 transition: 'transform 0.3s ease-in-out',
             }}
