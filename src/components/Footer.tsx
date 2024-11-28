@@ -63,9 +63,9 @@ export default function Footer() {
             }}
           >
             <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-              <Box component={RouterLink} to={'/'}>
-                <LaCaveIcon />
-              </Box>
+              <RouterLink to={'/'}>
+                  <LaCaveIcon/>
+              </RouterLink>
               <Typography
                 variant="body2"
                 gutterBottom
