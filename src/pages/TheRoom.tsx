@@ -34,7 +34,7 @@ export default function TheRoom(){
                     <Box display={'flex'} flexDirection={'row'}
                          alignItems={'center'}
                          justifyContent={'space-between'}>
-                        <Box>
+                        <Box mr={1}>
                         <Typography variant="h1" gutterBottom>
                             La Salle
                         </Typography>
