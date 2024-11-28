@@ -49,7 +49,7 @@ export default function Navbar() {
 		>
 			<Container maxWidth="lg">
 				<StyledToolbar variant="dense" disableGutters>
-					<Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
+					<Box component={Link} to={'/'} sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
 						<LaCaveIcon />
 						<Box sx={{ display: { xs: 'none', md: 'flex' } }}>
 							<Link to={"/"}>

@@ -6,6 +6,7 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import InputLabel from '@mui/material/InputLabel';
 import Link from '@mui/material/Link';
+import {Link as RouterLink } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
@@ -62,7 +63,9 @@ export default function Footer() {
             }}
           >
             <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-              <LaCaveIcon />
+              <Box component={RouterLink} to={'/'}>
+                <LaCaveIcon />
+              </Box>
               <Typography
                 variant="body2"
                 gutterBottom
