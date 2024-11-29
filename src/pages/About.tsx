@@ -8,7 +8,6 @@ import {aboutDescription} from "../data/about/aboutDescription";
 import Reviews from "../components/Reviews";
 import CustomImage from "../components/CustomImage";
 
-
 export default function About(){
     return (
         <Container
@@ -20,17 +19,17 @@ export default function About(){
                 justifyContent: 'center'
             }}>
             <Box>
-                 <Typography variant="h1" gutterBottom>
+                <Typography variant="h1" gutterBottom>
                     À Propos
                 </Typography>
                 <Typography>Ici vous en saurez plus !</Typography>
             </Box>
 
             <Grid container spacing={2}>
-                <Grid size={8}>
+                <Grid size={{xs:12,sm:8}}>
                     <CustomImage img={'/cave/photo_2.jpg'} alt={'le qg'}/>
                 </Grid>
-                <Grid size={4}>
+                <Grid size={{xs:12,sm:4}}>
                     <CustomImage img={'/cave/le-qg-chai-seb-21.jpg'} alt={'le qg'}/>
                 </Grid>
             </Grid>
