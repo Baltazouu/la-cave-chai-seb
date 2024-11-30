@@ -263,12 +263,6 @@ export default function Home() {
                 </Grid>
             </Box>
 
-            {/*<Box>*/}
-            {/*    <Typography variant="h2" gutterBottom>*/}
-            {/*        Nos réseaux sociaux*/}
-            {/*    </Typography>*/}
-            {/*</Box>*/}
-
         </Container>
     );
 }

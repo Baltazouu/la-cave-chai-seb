@@ -105,9 +105,10 @@ export default function About(){
 
                         </Box>
                     </Grid>
-                    <Grid size={{sm:12,md:6}}>
-                        <Map/>
+                    <Grid size={{xs:12,md:6}} style={{ height: '350px' }}>
+                        <Map />
                     </Grid>
+
                 </Grid>
             </Box>
         </Container>
