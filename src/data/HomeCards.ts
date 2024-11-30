@@ -18,21 +18,21 @@ export function HomeCards() : HomeCardData[]{
                 'Explore the key features of our latest product release that are helping businesses achieve their goals. From user-friendly interfaces to robust functionality, learn why our product stands out.',
         },
         {
-            img: '/cave/wiskies.jpg',
+            img: '/cave/whiskies.jpg',
             tag: 'Spiritueux',
             title: 'Notre Sélection de Whiskies',
             description:
                 'Découvrez notre products exceptionnelle de whiskies, soigneusement sélectionnés pour ravir les palais les plus exigeants. Que vous soyez amateur de single malts écossais, curieux des blends japonais raffinés ou en quête de saveurs inédites, nous avons de quoi vous séduire.',
         },
         {
-            img: '/salle/qg_4.jpg',
+            img: '/the-room/qg_4.jpg',
             tag: 'La Salle',
             title: "L'endroit parfait pour vos récéptions",
             description:
                 "La Salle Chai Seb, situé au premier étage de la cave, offre un espace de 80m² pour des événements privés et professionnels. Au rez-de-chaussée, découvrez \"La Cave Chai Séb\" avec une sélection de vins et bières. Des partenariats avec des traiteurs locaux permettent de proposer des repas sur place."
         },
         {
-            img: '/cave/calvas.jpeg',
+            img: '/cave/calvados.jpg',
             tag: 'Spiritueux',
             title: "Calvados d'exception, soigneusement sélectionnés",
             description:

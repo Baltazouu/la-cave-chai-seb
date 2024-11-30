@@ -47,7 +47,7 @@ export default function TheRoom(){
                                 height: '100%',
                                 objectFit: 'cover',
                             }}
-                            alt={'logo cave'} src={'/salle/logo.png'}
+                            alt={'logo cave'} src={'/the-room/logo.png'}
                         />
                         </Box>
                     </Box>
@@ -71,9 +71,14 @@ export default function TheRoom(){
 
             <ShowMore text={description} maxLength={400}/>
 
+            {/*<Divider>Plus de photos de la salle</Divider>*/}
+
+            {/*<TheRoomImageList/>*/}
+
             <Divider>Tarifs</Divider>
 
             <AccordionPrices/>
+
 
         </Container>
     );

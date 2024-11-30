@@ -120,7 +120,7 @@ export default function Footer() {
                   Contact
               </Typography>
             <Link color="text.secondary" variant="body2" href="tel:0231234567">
-                02 31 23 45 67
+                02 31 48 88 79
             </Link>
             <Link color="text.secondary" variant="body2" href="mailto:chaisebetsesamis@gmail.com">
                 chaisebetsesamis@gmail.com

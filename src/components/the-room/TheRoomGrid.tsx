@@ -17,16 +17,16 @@ export default function TheRoomGrid() {
                 columns={{ xs: 4, sm: 8, md: 12 }}
                 >
                     <Grid size={{ xs: 4, md: 8 }}>
-                            <CustomImage img={'/salle/qg_1.jpg'} alt={'le qg'}/>
+                            <CustomImage img={'/the-room/qg_1.jpg'} alt={'le qg'}/>
                     </Grid>
                     <Grid size={{xs: 4, md: 4}}>
-                        <CustomImage img={'/salle/qg_2.jpg'} alt={'le qg'}/>
+                        <CustomImage img={'/the-room/qg_2.jpg'} alt={'le qg'}/>
                     </Grid>
                     <Grid size={{xs: 4, md: 4}}>
-                        <CustomImage img={'/salle/qg_3.jpg'} alt={'le qg'}/>
+                        <CustomImage img={'/the-room/qg_3.jpg'} alt={'le qg'}/>
                     </Grid>
                     <Grid size={{xs: 4, md: 8}}>
-                        <CustomImage img={'/salle/qg_4.jpg'} alt={'le qg'}/>
+                        <CustomImage img={'/the-room/qg_4.jpg'} alt={'le qg'}/>
                     </Grid>
                 </Grid>
             </Grid>
