@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid2';
 import Typography from '@mui/material/Typography';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 import Link from '@mui/material/Link';
 
 import {HomeCards} from "../data/HomeCards";
@@ -12,7 +12,6 @@ import Container from "@mui/material/Container";
 import {StyledCard} from "../components/styled-card/StyledCard";
 import {StyledTypography} from "../components/styled-card/StyledTypoGraphy";
 import {StyledCardContent} from "../components/styled-card/StyledCardContent";
-import Events from "../components/events/Events";
 
 const cardData : HomeCardData[] = HomeCards();
 
@@ -55,11 +54,11 @@ export default function Home() {
                 >
                 </Box>
 
-                <Events/>
+                    {/*<Events/>*/}
 
-                <Typography variant="h2" gutterBottom>
-                    Découvrez la cave
-                </Typography>
+                    {/*<Typography variant="h2" gutterBottom>*/}
+                    {/*    Découvrez la cave*/}
+                    {/*</Typography>*/}
 
                 <Box
                     sx={{
@@ -155,15 +154,20 @@ export default function Home() {
                                 }}
                             />
                             <StyledCardContent>
-                                <Typography gutterBottom variant="caption" component="div">
-                                    {cardData[2].tag}
-                                </Typography>
-                                <Typography gutterBottom variant="h6" component="div">
-                                    {cardData[2].title}
-                                </Typography>
-                                <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                                    {cardData[2].description}
-                                </StyledTypography>
+                                <Box>
+                                    <Typography gutterBottom variant="caption" component="div">
+                                        {cardData[2].tag}
+                                    </Typography>
+                                    <Typography gutterBottom variant="h6" component="div">
+                                        {cardData[2].title}
+                                    </Typography>
+                                    <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+                                        {cardData[2].description}
+                                    </StyledTypography>
+                                    <Link component={RouterLink} color="inherit" to={'/products/whiskeys'}>
+                                        Découvrir nos whiskies
+                                    </Link>
+                                </Box>
                             </StyledCardContent>
                         </StyledCard>
                     </Grid>
@@ -239,25 +243,24 @@ export default function Home() {
                                 }}
                             />
                             <StyledCardContent>
-                                <Typography gutterBottom variant="caption" component="div">
-                                    {cardData[4].tag}
-                                </Typography>
-                                <Typography gutterBottom variant="h6" component="div">
-                                    {cardData[4].title}
-                                </Typography>
-                                <StyledTypography variant="body2" color="text.secondary" gutterBottom>
-                                    {cardData[4].description}
-                                </StyledTypography>
+                                <Box>
+                                    <Typography gutterBottom variant="caption" component="div">
+                                        {cardData[4].tag}
+                                    </Typography>
+                                    <Typography gutterBottom variant="h6" component="div">
+                                        {cardData[4].title}
+                                    </Typography>
+                                    <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+                                        {cardData[4].description}
+                                    </StyledTypography>
+                                    <Link component={RouterLink} color="inherit" to={'/products/calvados'}>
+                                        Découvrir nos calvados
+                                    </Link>
+                                </Box>
                             </StyledCardContent>
                         </StyledCard>
                     </Grid>
                 </Grid>
-            </Box>
-
-            <Box>
-                <Typography variant="h2" gutterBottom>
-                    Nos réseaux sociaux
-                </Typography>
             </Box>
 
         </Container>
