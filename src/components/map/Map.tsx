@@ -23,7 +23,6 @@ const Map: React.FC = () => {
 
     return (
         <MapContainer
-            // 49.1564152,0.2199669,604
             center={caveLocation}
             zoom={13}
             style={{ height: '100%', width: '100%' }}
