@@ -25,7 +25,8 @@ function App(props: { disableCustomTheme?: boolean }) {
               sx={{ display: 'flex', flexDirection: 'column', my: 16, gap: 4 }}>
                   <Routes>
                       <Route path="/" element={<Home/>} />
-                      <Route path="/products" element={<Products/>} />
+                      <Route path="/products" element={<Products />} />
+                      <Route path="/products/:type" element={<Products/>} />
                       <Route path="/the-room" element={<TheRoom/>} />
                       <Route path="/about" element={<About/>} />
                       <Route path="*" element={<NotFound/>} />
