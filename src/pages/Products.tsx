@@ -5,10 +5,10 @@ import {Chip} from "@mui/material";
 import {Product} from "../model/Product";
 import ProductGrid from "../components/products/ProductGrid";
 import Container from "@mui/material/Container";
-import {wines} from "../data/product/Wines";
-import {beers} from "../data/product/Beers";
-import {whiskies} from "../data/product/Whiskies";
-import {spirits} from "../data/product/Spirits";
+import {wines} from "../data/products/Wines";
+import {beers} from "../data/products/Beers";
+import {whiskies} from "../data/products/Whiskies";
+import {spirits} from "../data/products/Spirits";
 
 export default function Products() {
     const [products, setProducts] = React.useState<Product[]>([...spirits, ...beers,...wines, ...whiskies]);

@@ -54,12 +54,6 @@ export default function Home() {
                 >
                 </Box>
 
-                    {/*<Events/>*/}
-
-                    {/*<Typography variant="h2" gutterBottom>*/}
-                    {/*    Découvrez la cave*/}
-                    {/*</Typography>*/}
-
                 <Box
                     sx={{
                         display: 'flex',
@@ -116,8 +110,8 @@ export default function Home() {
                                 component="img"
                                 alt="green iguana"
                                 image={cardData[1].img}
-                                aspect-ratio="16 / 9"
                                 sx={{
+                                    aspectRatio: '16 / 9',
                                     borderBottom: '1px solid',
                                     borderColor: 'divider',
                                 }}

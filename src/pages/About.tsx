@@ -9,7 +9,6 @@ import Reviews from "../components/Reviews";
 import CustomImage from "../components/CustomImage";
 import Map from "../components/map/Map";
 import Link from "@mui/material/Link";
-import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -33,11 +32,11 @@ export default function About(){
             </Box>
 
             <Grid container spacing={2}>
-                <Grid size={8}>
-                    <CustomImage img={'/cave/cave_1.jpg'} alt={'le qg'}/>
+                <Grid size={{xs:6,md:8}}>
+                    <CustomImage img={'/cave/cave_1.webp'} alt={'le qg'}/>
                 </Grid>
-                <Grid size={4}>
-                    <CustomImage img={'/outdoor/outdoor_1.jpeg'} alt={'le qg'}/>
+                <Grid size={{xs:6,md:4}}>
+                    <CustomImage img={'/outdoor/outdoor_1.webp'} alt={'le qg'}/>
                 </Grid>
             </Grid>
 
