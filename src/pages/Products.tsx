@@ -9,34 +9,41 @@ import {wines} from "../data/products/Wines";
 import {beers} from "../data/products/Beers";
 import {whiskies} from "../data/products/Whiskies";
 import {spirits} from "../data/products/Spirits";
+import {useParams} from "react-router-dom";
+import {Link as RouterLink} from "react-router-dom";
+import {calvados} from "../data/products/Calvados";
+
 
 export default function Products() {
-    const [products, setProducts] = React.useState<Product[]>([...spirits, ...beers,...wines, ...whiskies]);
-    const [selectedCategory, setSelectedCategory] = React.useState<string>("All");
+    const [products, setProducts] = React.useState<Product[]>([...spirits, ...beers, ...wines, ...whiskies]);
 
-    const handleClick = (category: string) => {
-        setSelectedCategory(category);
-        switch (category) {
-            case "Wines":
+    const { type } = useParams();
+
+    React.useEffect(() => {
+        switch (type) {
+            case "wines":
                 setProducts(wines);
                 break;
-            case "Beers":
+            case "beers":
                 setProducts(beers);
                 break;
-            case "Whiskies":
+            case "whiskeys":
                 setProducts(whiskies);
                 break;
-            case "Spirits":
+            case "spirits":
                 setProducts(spirits);
+                break;
+            case "calvados":
+                setProducts(calvados);
                 break;
             default:
                 const allProducts = [...wines, ...beers, ...whiskies, ...spirits];
                 setProducts(allProducts);
         }
-    };
+    }, [type]);
 
     const getChipStyles = (category: string) => {
-        return selectedCategory === category ? { backgroundColor: 'primary', color: 'white' } : { backgroundColor: 'transparent', border: 'none' };
+        return type === category ? { backgroundColor: 'primary', color: 'white', cursor:'pointer' } : { backgroundColor: 'transparent', border: 'none', cursor:'pointer' };
     };
 
     return (
@@ -64,34 +71,46 @@ export default function Products() {
                     }}
                 >
                     <Chip
-                        onClick={() => handleClick("All")}
+                        component={RouterLink}
+                        to={'/products'}
                         size="medium"
                         label="Tout voir"
-                        sx={getChipStyles("All")}
+                        sx={getChipStyles("all")}
                     />
                     <Chip
-                        onClick={() => handleClick("Wines")}
+                        component={RouterLink}
+                        to={'/products/wines'}
                         size="medium"
                         label="Vins"
-                        sx={getChipStyles("Wines")}
+                        sx={getChipStyles("wines")}
                     />
                     <Chip
-                        onClick={() => handleClick("Beers")}
+                        component={RouterLink}
+                        to={'/products/beers'}
                         size="medium"
                         label="Bières"
-                        sx={getChipStyles("Beers")}
+                        sx={getChipStyles("beers")}
                     />
                     <Chip
-                        onClick={() => handleClick("Whiskies")}
+                        component={RouterLink}
+                        to={'/products/whiskeys'}
                         size="medium"
                         label="Whisky"
-                        sx={getChipStyles("Whiskies")}
+                        sx={getChipStyles("whiskeys")}
                     />
                     <Chip
-                        onClick={() => handleClick("Spirits")}
+                        component={RouterLink}
+                        to={'/products/spirits'}
                         size="medium"
                         label="Spiritueux"
-                        sx={getChipStyles("Spirits")}
+                        sx={getChipStyles("spirits")}
+                    />
+                    <Chip
+                        component={RouterLink}
+                        to={'/products/calvados'}
+                        size="medium"
+                        label="Calvados"
+                        sx={getChipStyles("calvados")}
                     />
                 </Box>
                 <ProductGrid products={products} />
